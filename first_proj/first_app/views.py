@@ -6,4 +6,4 @@ def index(request):
     mycontext={
         'data': 'This is the first web page of the app.'
     }
-    return render(request,'first_app/index.html',context=mycontext)
+    return render(request, 'first_app/index.html', context=mycontext)
