@@ -1,4 +1,10 @@
 body
 {
-	background-color:blue;
+	background: white;
+}
+#menu
+{
+	display:none;
+	position:fixed;
+	background:blue;
 }
