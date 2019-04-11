@@ -14,25 +14,37 @@
 		<script>
 			function navBut()
 			{
-        if($("#menu").css("display")=="none")
-				  $("#menu").css("display","block");
+        if($("#Menu").css("display")=="none")
+				  $("#Menu").css("display","block");
         else
-          $("#menu").css("display","none");
+          $("#Menu").css("display","none");
 			}
 		</script>
     <title>TechnicalGo</title>
   </head>
   <body>
 
-		<nav class="navbar navbar-dark bg-dark">
-		  <button class="navbar-toggler" type="button" onclick = navBut()>
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
+		<nav class="navbar navbar-light bg-light navconfig row">
+		  <div class="col-4">
+        <button class="btn btn-outline-secondary" type="button" onclick = navBut()>
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+      </div>
+      <div class="col-4 text-center">
+        <h2><a class="logo" href="../index">Logo/Name</a></h2>
+      </div>
+      <div class="col-4 text-right">
+        <button type="button" class="btn">
+          <img src="{%static 'first_app/imgs/search-icon.png'%}" width="25px" >
+        </button>
+      </div>
 		</nav>
-		<div id = "menu">
-			<p>hello</p>
+		<div id="Menu" class="row">
+      <div class="col">topic</div>
+      <div class="col">topic</div>
+      <div class="col">topic</div>
 		</div>
-    <h1>Hello, world!</h1>
+      <h1>Hello, world!</h1>
 		{{data}}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

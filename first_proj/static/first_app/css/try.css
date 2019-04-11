@@ -2,9 +2,25 @@ body
 {
 	background: white;
 }
-#menu
+#Menu
 {
 	display:none;
 	position:fixed;
-	background:blue;
+	background:grey;
+	width: 100%;
+}
+
+nav.navconfig
+{
+	border-bottom: 0.5px solid lightgrey;
+}
+
+a.logo
+{
+	color:grey;
+}
+a.logo:hover
+{
+	color:grey;
+	text-decoration: none;
 }
