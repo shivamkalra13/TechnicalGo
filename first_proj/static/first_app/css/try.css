@@ -6,52 +6,51 @@ body
 {
 	display: none;
 	position:fixed;
-	background:#2d3436;
-	width: 50%;
-	max-height:90%;
-	margin-top: -.2%;
+	background:white;
+	height:92%;
+	margin-top: 0%;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-	opacity: .90;
-	color: white;
+	color: #636e72;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	z-index: 0;
 }
 #searchBar
 {
 	position:fixed;
-	right:2%;
 	display:none;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-	border-radius: 20px;
-	padding:0.2%;
+	border-radius: 2px;
+	padding:2%;
+	width:100%;
+	height:2%;
 }
 h6.menuHead
 {
 	font-family: 'Luckiest Guy', cursive;
+	text-align: center;
+	border-bottom: 1px solid gray;
 }
-a.menuContent
-{
-	color:white;
-}
+
 a.menuContent:hover
 {
-	color: #dfe6e9;
+	color: #636e72;
 	text-decoration: none;
 }
 .navbar
 {
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 03px 10px 0 rgba(0, 0, 0, 0.19);
-	background-color: #f7f7f7;
+	background-color: black;
 	margin-right: 1px;
 }
 
 a.logo
 {
-	color:#595959;
+	color:white;
 }
 a.logo:hover
 {
-	color:#595959;
+	color:white;
 	text-decoration: none;
 }
 
@@ -91,6 +90,10 @@ a.logo:hover
 	{
 		display: none;
 	}
+	#Menu
+	{
+		width:65%;
+	}
 }
 
 @media (min-width: 768px)	/*for other devices*/
@@ -98,6 +101,10 @@ a.logo:hover
 	.navlogo
 	{
 		display: none;
+	}
+	#Menu
+	{
+		width:25%;
 	}
 }
 #homepic
@@ -110,4 +117,14 @@ a.logo:hover
 {
 	width: 100%;
 	height:100%;
+}
+
+.navButton
+{
+	background:white;
+}
+
+#belowNav
+{	
+	z-index: -1;
 }
