@@ -5,51 +5,95 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{%static 'first_app/css/try.css'%}">
+    <!--Font styles form google-->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
 			function navBut()
 			{
-        if($("#Menu").css("display")=="none")
-				  $("#Menu").css("display","block");
-        else
-          $("#Menu").css("display","none");
+        $("#Menu").fadeToggle();
 			}
+      function menuClose()
+      {
+        $("#Menu").fadeOut();
+      }
+      function showSearch()
+			{
+        if($("#searchBar").css("display")=="none")
+				  $("#searchBar").css("display","block");
+        else
+          $("#searchBar").css("display","none");
+			}
+      function closeSearch()
+      {
+        $("#searchBar").css("display","none");
+      }
 		</script>
     <title>TechnicalGo</title>
   </head>
   <body>
-
-		<nav class="navbar navbar-light bg-light navconfig row">
+    <div class="mycon">
+		<nav class="navbar navbar-light row">
 		  <div class="col-4">
-        <button class="btn btn-outline-secondary" type="button" onclick = navBut()>
+        <button onfocusout="menuClose()" class="btn btn-outline-secondary" type="button" onclick = navBut()>
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
       </div>
-      <div class="col-4 text-center">
-        <h2><a class="logo" href="../index">Logo/Name</a></h2>
+      <div class="col-4 text-center navname">
+        <h3><a class="logo" href="../index">Name</a></h3>
+      </div>
+      <div class="col-4 text-center navlogo">
+        <h5><a class="logo" href="../index">logo</a></h5>
       </div>
       <div class="col-4 text-right">
-        <button type="button" class="btn">
+        <button type="button" class="btn" onclick=showSearch()>
           <img src="{%static 'first_app/imgs/search-icon.png'%}" width="25px" >
         </button>
       </div>
 		</nav>
-		<div id="Menu" class="row">
-      <div class="col">topic</div>
-      <div class="col">topic</div>
-      <div class="col">topic</div>
-		</div>
-      <h1>Hello, world!</h1>
-		{{data}}
+    <div id="Menu">
+      <div  class="d-flex row">
+        <div class="col-md-4 text-left">
+          <h6 class="menuHead">Courses/Classes</h6>
+          <ul>
+            <li><a href="#" class="menuContent">link</a></li>
+            <li><a href="#" class="menuContent">link</a></li>
+            <li><a href="#" class="menuContent">link</a></li>
+            <li><a href="#" class="menuContent">link</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-left">
+          <h6 class="menuHead">Subjects</h6>
+          <ul>
+            <li><a href="#" class="menuContent">link</a></li>
+            <li><a href="#" class="menuContent">link</a></li>
+            <li><a href="#" class="menuContent">link</a></li>
+            <li><a href="#" class="menuContent">link</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-left">
+          <h6 class="menuHead">Notes/Books</h6>
+          <ul>
+            <li><a href="#" class="menuContent">link</a></li>
+            <li><a href="#" class="menuContent">link</a></li>
+            <li><a href="#" class="menuContent">link</a></li>
+            <li><a href="#" class="menuContent">link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <input id="searchBar" type="text" placeholder="Search" onfocusout=closeSearch()></input>
+    <div id="homepic">
+      <img src="{%static 'first_app/imgs/homepic6.jpeg'%}" class="img-fluid">
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </div>
   </body>
 </html>
