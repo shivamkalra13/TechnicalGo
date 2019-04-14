@@ -2,6 +2,7 @@
 {%load static%}
 <html lang="en">
   <head>
+    <!--Importing all, getting ready------------------------------------------>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,10 +10,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{%static 'first_app/css/try.css'%}">
     <!--Font styles form google-->
-    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!---Importing finish------------------------------------------------------->
+
+    <!---Coded Scripts Begin------------------------------------------------------->
 		<script>
+      $(document).scroll(function() {
+        //code to change navbar background when user scrolls page:-
+         if($(window).scrollTop() > 50){
+          $(".navbar").css("background","#001e3c");
+          $(".navbar").css("box-shadow"," 0 2px 4px 0 rgba(0, 0, 0, 0.2), 3px 5px 0 rgba(0, 0, 0, 0.19) ");
+         }else if($(window).scrollTop() < 50){
+           $(".navbar").css("background","transparent");
+           $(".navbar").css("box-shadow","none");
+         }
+      });
+      //handling the click of navbar menu button
 			function navBut()
 			{
         if($("#Menu").is(":hidden"))
@@ -25,11 +40,13 @@
           $("#belowNav").css("filter","none");
         }
 			}
+      //handles clicking out , when menu is open
       function menuClose()
       {
         $("#Menu").hide("slide");
         $("#belowNav").css("filter","none");
       }
+      //handles the click on search button
       function showSearch()
 			{
         if($("#searchBar").css("display")=="none")
@@ -37,31 +54,50 @@
         else
           $("#searchBar").css("display","none");
 			}
+      //handles clicking out , when searchbar is open
       function closeSearch()
       {
         $("#searchBar").css("display","none");
       }
 		</script>
+    <!---Coded Scripts Ends------------------------------------------------------->
+
     <title>TechnicalGo</title>
   </head>
+
   <body>
+    <!--NavBar begins---------------------------------------------------------->
 		<nav class="navbar navbar-dark row">
 		  <div class="col-4">
-        <button onfocusout="menuClose()" class="btn btn-outline-secondary" type="button" onclick = navBut() id="navButton" style="padding-bottom:8px;">
+        <!--Menu button:- --->
+        <button onfocusout="menuClose()" class="btn" type="button" onclick = navBut() id="navButton">
 		      <span><img src="{%static 'first_app/imgs/menu-icon.png'%}" width="25px"></span>
 		    </button>
+        <!--navContent will display on large screens-->
+        <a class="navContent" href="../index">Home</a>
+        <a class="navContent" href="#">About Us</a>
       </div>
+      <!--navname will display on large screen-->
       <div class="col-4 text-center navname">
-        <h2><a class="logo" href="../index">Name</a></h2>
+        <h1><a class="logo" href="../index">Technical Go</a></h1>
       </div>
+      <!--navlogo will display on small screen-->
       <div class="col-4 text-center navlogo">
         <h5><a class="logo" href="../index">logo</a></h5>
       </div>
       <div class="col-4 text-right">
         <img src="{%static 'first_app/imgs/search-icon.png'%}" onclick=showSearch() width="25px" style="cursor:pointer;">
       </div>
+      <!--searchBar will display when searchButton is clicked-->
+      <div id="searchBar">
+        <input type="text" placeholder="Search #Iron Man" onfocusout=closeSearch()></input>
+        <button type="button" class="btn btn-danger">Search It</button>
+      </div>
 		</nav>
+    <!--NavBar ends------------------------------------------------------------>
+    <!--NavBar Menu begins----------------------------------------------------->
     <div id="Menu">
+          <h6 id="MenuCross">X</h6>
           <h6 class="menuHead">Classes</h6>
           <ul style="list-style-type:none;">
             <li><a href="#" class="menuContent">1st-8th</a></li>
@@ -76,15 +112,32 @@
             <li><a href="#" class="menuContent">Charted Accountancy</a></li>
             <li><a href="#" class="menuContent">B.Sc.</a></li>
           </ul>
+          <a href="#"><h6 class="menuHead">About Us</h6></a>
       </div>
     </div>
+    <!--NavBar Menu ends------------------------------------------------------->
+
+    <!-- Home Page below NavBar:- --------------------------------------------->
     <div id="belowNav">
-      <input id="searchBar" type="text" placeholder="Search #Iron Man" onfocusout=closeSearch()></input>
-      <div id="homepic">
-      <img src="{%static 'first_app/imgs/homepic6.jpeg'%}" class="img-fluid">
+      <!--Cover Picture on Home/Index Page begins------------------------------>
+      <div id="homepic" class="Img">
+        <h3>The Past cannot be changed<br>The future is yet in your<br>Power</h3>
       </div>
+      <!--Cover Picture on Home/Index Page ends------------------------------>
+
+      <!--container for putting content begins---->
+      <div class="container-fluid">
+        <p><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
+        </div>
+        <!--container for putting content ends---->
     </div>
-    <!-- Optional JavaScript -->
+
+    <!-- Optional JavaScript(For Bootstrap) -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
