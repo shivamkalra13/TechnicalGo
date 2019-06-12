@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{%static 'first_app/css/try.css'%}">
+    <link rel="stylesheet" href="{%static 'first_app/css/try.css'%}" type="text/css">
     <!--Font styles form google-->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <!--JQuery-->
@@ -89,10 +89,12 @@
         <img src="{%static 'first_app/imgs/search-icon.png'%}" onclick=showSearch() width="25px" style="cursor:pointer;">
       </div>
       <!--searchBar will display when searchButton is clicked-->
-      <div id="searchBar">
-        <input type="text" placeholder="Search #Iron Man" onfocusout=closeSearch()></input>
-        <button type="button" class="btn btn-danger">Search It</button>
+      <div class="container-fluid"  id="searchBar">
+      <div class="row">
+        <div class="col-sm-10"><input id="sinput1" type="text" placeholder="Search #Iron Man" onfocusout=closeSearch()></input></div>
+        <div class="col-sm-2"><input type="button" id="sinput2" value="Search It" class="btn btn-danger"></input></div>
       </div>
+    </div>
 		</nav>
     <!--NavBar ends------------------------------------------------------------>
     <!--NavBar Menu begins----------------------------------------------------->
@@ -138,7 +140,7 @@
     </div>
 
     <!-- Optional JavaScript(For Bootstrap) -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
