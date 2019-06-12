@@ -22,6 +22,7 @@ body /*backgraound colour*/
 	padding-top: 1%;
 }
 
+
 /* navigation menu div starts */
 
 
@@ -69,19 +70,26 @@ color: white;
 
 .nav-item:hover /*tab hover*/
 {
-	background-color: blue;
+	background-color: #e53467;
 	font-weight: bold;
 }
-.r1
+
+#nav-videos-tab
 {
-	border-radius: 7px 0px 0px 7px; //top-right, bottom-left corner
-}
-.r2
-{
-	border-radius: 0px 7px 7px 0px; //top-left, bottom-right corner
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
+#nav-notes-tab
+{
+	border-radius: 0;
+}
 
+#nav-books-tab
+{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
 /*navigation menu ends */
 
 

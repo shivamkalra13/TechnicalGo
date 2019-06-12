@@ -19,5 +19,6 @@ from . import views     # Just importing views.py
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name='index')   # URL of the index of website.
+    path('index/', views.index, name='index'),   # URL of the index of website.
+    path('classes/', views.classes, name='classes')
 ]
