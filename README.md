@@ -35,3 +35,13 @@ If your pull request gets at least 1 approval then it can be merged to master.
 * Under Branches on GitHub you can find a visual representation of how far behind or head your branch is from master.
 * Double check with team members before merging.
 * Make sure you are on a branch before you start working. Get in the habit of checking.
+
+## Directories for STATIC and TEMPLATES
+
+##### _static directories_
+* For CSS - static/first_app/css/
+* For Images - static/first_app/images/
+* For Javascript - static/first_app/js/
+
+##### _Template Directory_
+* For HTML(& templates) - templates/first_app/
