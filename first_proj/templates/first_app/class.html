@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+  <head>
+    <!--Importing all, getting ready------------------------------------------>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'static/first_app/css/subject.css' %}">
+    <!--Font styles form google-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!---Importing finish------------------------------------------------------->
+  </head>
+  <body>
+      <div class="nav1">
+        &nbsp;&nbsp;<b>Space for Navbar</b>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="head col-12">
+              Classes
+            </div>
+          <div class="col-12">
+              <div class="opt1 col-12">
+                <div class="d-flex row">
+                  <div class="order-3 order-lg-1 order-md-1 order-xl-1 col-lg-6 col-md-6 col-lg-6 col-12 align-items-end">
+                    <div class="nav nav-pills" id="nav-tab" role="tablist">
+                      <a class="nav-item nav-link active tab" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">Videos</a>
+                      <a class="nav-item nav-link " id="nav-home-tab" data-toggle="pill" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">Notes</a>
+                      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Books</a>
+                    </div>
+                  </div>
+                  <div class="order-1 order-lg-2 order-md-3 order-xl-3 col-12 col-lg-3 col-md-3 col-xl-3 align-self-center">
+                    <select>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                  <div class="order-2 order-lg-3 order-md-3 order-xl-3 col-lg-3 col-md-3 col-xl-3 col-12 align-self-center">
+                    <select>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space">
+          </div>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="row">
+                  <div class="col-6 col-lg-3 col-md-3 col-xl-3">
+                    <div class="card ncard">
+                      <div class="nwrap">
+                        <img class="card-img-top" src="{%static 'static/first_app/images/home4.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 col-md-3 col-xl-3">
+                    <div class="card ncard">
+                      <div class="nwrap">
+                        <img class="card-img-top" src="{%static 'static/first_app/images/home4.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 col-md-3 col-xl-3">
+                    <div class="card ncard">
+                      <div class="nwrap">
+                        <img class="card-img-top" src="{%static 'static/first_app/images/home4.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 col-md-3 col-xl-3 ">
+                    <div class="card">
+                      <div class="nwrap ncard">
+                        <img class="card-img-top" src="{%static 'static/first_app/images/home4.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">some quick example text</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <br>
+                <div class="vwrap">
+                  <div class="col-12 video">
+                    <div class="card vcard">
+                      <div class="row">
+                        <div class="col-5 col-md-3 col-lg-3 col-xl-3">
+                          <img class="img-fluid w-100 text-center vthumb img-responsive" src="{%static 'static/first_app/images/home4.jpg' %}" alt="Card image cap">
+                        </div>
+                        <div class="col-7 col-md-9 col-lg-9 col-xl-9 desc">
+                          <div class="card-block">
+                          Hello
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="vwrap">
+                  <div class="col-12 video">
+                    <div class="card vcard">
+                      <div class="row">
+                        <div class="col-5 col-md-3 col-lg-3 col-xl-3">
+                          <img class="img-fluid w-100 text-center vthumb img-responsive" src="{%static 'static/first_app/images/home4.jpg' %}" alt="Card image cap">
+                        </div>
+                        <div class="col-7 col-md-9 col-lg-9 col-xl-9 desc">
+                          <div class="card-block">
+                          Hello
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Books</div>
+            </div>
+      </div>
+      <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
