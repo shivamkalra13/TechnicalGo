@@ -1,1 +1,0 @@
-web: gunicorn learningera.wsgi:application --log-file -
