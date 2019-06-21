@@ -1,1 +1,1 @@
-web: gunicorn learningera.wsgi
+web: gunicorn first_proj.wsgi
