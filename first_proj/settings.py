@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't5^8cd$v5)uboogua_v47$ld$_l0a+cu#-lkb#po4gr23b$b&5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['learningera.herokuapp.com','www.learningera.ml']
 
