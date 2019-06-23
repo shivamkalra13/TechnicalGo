@@ -14,7 +14,7 @@ class Subject(models.Model):
     classno = models.ForeignKey(Classes, on_delete = models.CASCADE)
 
     def __str__(self):
-        return (self.subcode,self.subname)
+        return str((self.subcode,self.subname))
 
 class Notes(models.Model):
     classno = models.ForeignKey(Classes, blank = False, on_delete = models.CASCADE)
