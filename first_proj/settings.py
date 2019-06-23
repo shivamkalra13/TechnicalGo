@@ -26,7 +26,7 @@ SECRET_KEY = 't5^8cd$v5)uboogua_v47$ld$_l0a+cu#-lkb#po4gr23b$b&5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['learningera.herokuapp.com','learningera.ml']
+ALLOWED_HOSTS = ['learningera.herokuapp.com','www.learningera.ml']
 
 
 # Application definition
