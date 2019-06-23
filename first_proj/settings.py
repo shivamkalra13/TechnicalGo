@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't5^8cd$v5)uboogua_v47$ld$_l0a+cu#-lkb#po4gr23b$b&5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['learningera.herokuapp.com']
 
@@ -87,6 +87,12 @@ DATABASES = {
     }
 }
 
+#Done for postgres that is used in heroku
+import dj_database_url
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+#heroku postgres config over
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

@@ -16,7 +16,7 @@ body
 	overflow:auto;
 	/*overflow-y: scroll;
 	overflow-x: hidden;*/
-	z-index: 0;
+	z-index: 100;
 }
 h6.menuHead
 {
@@ -142,12 +142,6 @@ a.logo:hover
 }
 /*homepic(Cover picture on Home) ends*/
 
-/*Config for preventing blur on Menu(of NavBar) and bluring everything below NavBar*/
-#belowNav
-{
-	z-index: -1;
-}
-
 /*Configuring for different screen sizes :- */
 @media (max-width: 767.98px)	/*for mobile and tablet*/
 {
@@ -163,11 +157,45 @@ a.logo:hover
 	{
 		display: none;
 	}
+	#homepic
+	{
+		width: 100%;
+		background: url("../imgs/homepic11.jpeg");
+		background-size:100% 100%;
+		/*filter: blur(5px);*/
+		color: white;
+		text-align: center;
+		padding:5%;
+		padding-top: 15%;
+	}
 	#homepic h3
 	{
 		font-weight: bold;
-		font-size: 110%;
+		font-size: 300%;
 	}
+	/*SearchBar begins*/
+	#searchBar
+	{
+		display:none;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+		width:100%;
+	}
+
+	#sinput1
+	{
+		height: 100%;
+		width:100%;
+		padding:1%;
+		margin-left: -3%;
+	}
+	#sinput2
+	{
+		padding:1%;
+		width:300%;
+		height: 100%;
+		margin-left: -150%;
+	}
+	/*SearchBar ends*/
 }
 
 @media (min-width: 768px)	/*for other devices*/
