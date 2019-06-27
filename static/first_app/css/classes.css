@@ -6,12 +6,6 @@ body /*backgraound colour*/
 {
 	max-width: 92%;
 }
-.nav1 /*space for navbar */
-{
-	height: 10vh;
-	background-color: orange;
-	font-size: 150%;
-}
 /* div for class heading */
 .head /*heading (Class)*/
 {

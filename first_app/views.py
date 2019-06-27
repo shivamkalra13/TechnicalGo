@@ -10,3 +10,6 @@ def index(request):
 
 def classes(request):
     return render(request, 'first_app/classes.html')
+
+def navbar(request):
+    return render(request, 'first_app/navbar.html')
