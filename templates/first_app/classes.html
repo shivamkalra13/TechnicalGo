@@ -26,6 +26,9 @@
         $("#classDrop").change(function(){
           window.open('../classes/?cld='+$("#classDrop").val(),'_self');
         });
+        $("#subDrop").change(function(){
+          window.open('../classes/?cld='+$("#classDrop").val()+'&sbd='+$("#subDrop").val(),'_self');
+        });
       });
     </script>
     <!---Importing finish------------------------------------------------------->
@@ -51,22 +54,29 @@
                   <div class="order-1 order-lg-2 order-md-3 order-xl-3 col-12 col-lg-3 col-md-3 col-xl-3 align-self-center">
                     <select id="classDrop">
                       <option disabled selected>Course/Class</option>
-                      <option>1-8</option>
-                      <option>9</option>
-                      <option>10</option>
-                      <option>11</option>
-                      <option>12</option>
-                      <option>Engineering</option>
-                      <option>CA</option>
-                      <option>B.Sc.</option>
+                      {% if sel_class %}
+                        <option selected>{{sel_class}}</option>
+                      {% endif %}
+                      {% if class_list %}
+                        {% for class in class_list %}
+                          {% ifnotequal class sel_class %}
+                          <option>{{class}}</option>
+                          {% endifnotequal %}
+                        {% endfor %}
+                      {% endif %}
                     </select>
                   </div>
                   <div class="order-2 order-lg-3 order-md-3 order-xl-3 col-lg-3 col-md-3 col-xl-3 col-12 align-self-center">
-                    <select>
+                    <select id="subDrop">
                       <option disabled selected>Subject</option>
+                      {% if sel_sub %}
+                        <option selected>{{sel_sub}}</option>
+                      {% endif %}
                       {% if sub_list %}
-                        {% for subname in sub_list %}
-                          <option>{{subname}}</option>
+                        {% for sub in sub_list %}
+                          {% ifnotequal sub.subname sel_sub %}
+                          <option>{{sub.subname}}</option>
+                          {% endifnotequal %}
                         {% endfor %}
                       {% endif %}
                     </select>
