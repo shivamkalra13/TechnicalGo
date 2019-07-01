@@ -19,7 +19,7 @@ class Classes(models.Model):
     subcode = models.CharField(max_length = 7, blank = False)
 
     def __str__(self):
-        return self.subcode
+        return str(self.classno)+","+str(self.subcode)
 
 class Subject(models.Model):
     subcode = models.CharField(max_length = 7, blank = False, primary_key = True)
