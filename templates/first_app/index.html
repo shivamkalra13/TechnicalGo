@@ -21,7 +21,7 @@
         //code to change navbar background when user scrolls page:-
          if($(window).scrollTop() > 50){
           $(".navbar").css("background","#001e3c");
-          $(".navbar").css("box-shadow"," 0 2px 4px 0 rgba(0, 0, 0, 0.2), 3px 5px 0 rgba(0, 0, 0, 0.19) ");
+          $(".navbar").css("box-shadow","0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)");
          }else if($(window).scrollTop() < 50){
            $(".navbar").css("background","transparent");
            $(".navbar").css("box-shadow","none");
@@ -128,13 +128,42 @@
       <!--Cover Picture on Home/Index Page ends------------------------------>
 
       <!--container for putting content begins---->
-      <div class="container-fluid">
-        <p><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1><br>
+      <div id="belowContent"class="container-fluid">
+        <br>
+        <h1 align="center"> Welcome to a platform that provides the pathway to excel in the academics</h1>
+        <br>
+        <div class="row">
+          <div class="wrap col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="{%static 'first_app/imgs/book1.jpeg'%}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Books</h5>
+                <p class="card-text">Books are human beings' best friend.</p>
+              </div>
+            </div>
+          </div>
+          <div class="wrap col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="{%static 'first_app/imgs/vid1.jpeg'%}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Videos</h5>
+                <p class="card-text">Enhance your learnings through videos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="wrap col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="{%static 'first_app/imgs/home4.jpg'%}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Notes</h5>
+                <p class="card-text">Make your exam preparation easier.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          <br>
+
         </div>
         <!--container for putting content ends---->
     </div>
