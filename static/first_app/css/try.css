@@ -88,6 +88,7 @@ font-weight: bold;
 	top:0;
 	left:0;
 	right:0;
+	z-index: 10;
 }
 a.navContent
 {
@@ -106,6 +107,7 @@ a.navContent:hover
 a.logo
 {
 	color:#F44336;
+	font-size: 120%;
 	font-weight: bold;
 }
 a.logo:hover
@@ -138,7 +140,7 @@ a.logo:hover
 #homepic h3
 {
 	font-weight: bold;
-	font-size: 400%;
+	font-size: 350%;
 }
 /*homepic(Cover picture on Home) ends*/
 
@@ -198,6 +200,17 @@ a.logo:hover
 	/*SearchBar ends*/
 }
 
+#belowContent
+{
+	margin-top: 3%;
+	font-family: sans-serif;
+}
+
+#belowContent h1
+{
+	font-weight: bold;
+}
+
 @media (min-width: 768px)	/*for other devices*/
 {
 	.navlogo
@@ -208,4 +221,21 @@ a.logo:hover
 	{
 		width:22%;
 	}
+}
+
+.card{
+	z-index: -2;
+	padding: 2%;
+	border-radius: 18px;
+}
+.wrap
+{
+	padding: 0%;
+	margin:4%;
+	border-radius: 18px;
+}
+.wrap:hover
+{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	cursor: pointer;
 }

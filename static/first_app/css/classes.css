@@ -112,7 +112,6 @@ color: white;
 }
 .vwrap /*video wrapper div */
 {
-	border-bottom: solid 1px black;
 	margin-bottom: 10px;
 }
 .vcard:hover
