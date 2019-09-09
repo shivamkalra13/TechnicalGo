@@ -198,6 +198,16 @@ a.logo:hover
 		margin-left: -150%;
 	}
 	/*SearchBar ends*/
+
+	/*Footer Begins */
+	.footer
+	{
+		max-height: 22vh;
+		min-height: 22vh;
+		background-color: #001e3c;
+		color: white;
+		padding: 3%;
+	}
 }
 
 #belowContent
@@ -220,6 +230,14 @@ a.logo:hover
 	#Menu
 	{
 		width:22%;
+	}
+	.footer /* footer */
+	{
+		max-height:15vh;
+		min-height:15vh;
+		background-color: #001e3c;
+		color: white;
+		padding: 3%;
 	}
 }
 
