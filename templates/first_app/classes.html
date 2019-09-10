@@ -46,8 +46,8 @@
                 <div class="d-flex row">
                   <div class="order-3 order-lg-1 order-md-1 order-xl-1 col-lg-6 col-md-6 col-lg-6 col-12 align-items-end">
                     <div class="nav nav-pills" id="nav-tab" role="tablist">
-                      <a class="nav-item nav-link active" id="nav-videos-tab" data-toggle="tab" href="#nav-videos" role="tab" aria-controls="nav-videos" aria-selected="true">Videos</a>
-                      <a class="nav-item nav-link" id="nav-notes-tab" data-toggle="pill" href="#nav-notes" role="tab" aria-controls="nav-notes" aria-selected="false">Notes</a>
+                      <a class="nav-item nav-link active" id="nav-videos-tab" data-toggle="tab"  role="tab" aria-controls="nav-videos" aria-selected="true" href="#nav-videos"> Videos</a>
+                      <a class="nav-item nav-link" id="nav-notes-tab" data-toggle="tab" href="#nav-notes" role="tab" aria-controls="nav-notes" aria-selected="false">Notes</a>
                       <a class="nav-item nav-link" id="nav-books-tab" data-toggle="tab" href="#nav-books" role="tab" aria-controls="nav-books" aria-selected="false">Books</a>
                     </div>
                   </div>
@@ -90,46 +90,24 @@
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade" id="nav-notes" role="tabpanel" aria-labelledby="nav-notes-tab">
                 <div class="row">
-                  <div class="col-6 col-lg-3 col-md-3 col-xl-3">
-                    <div class="card ncard">
-                      <div class="nwrap">
-                        <img class="card-img-top" src="{%static 'first_app/imgs/home4.jpg' %}" alt="Card image cap">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text</p>
+                  {% if notes_list %}
+                    {% for note in notes_list %}
+                      <!-- one card -->
+                      <div class="col-6 col-lg-3 col-md-3 col-xl-3"  style="margin-bottom:2%;">
+                        <a href="{{note.url}}" target="_blank" style="text-decoration:none;color:black">
+                        <div class="card ncard">
+                          <div class="nwrap">
+                            <img class="card-img-top" src="{%static 'first_app/imgs/home4.jpg' %}" alt="Card image cap">
+                            <div class="card-body">
+                              <p class="card-text">{{note.title}}</p>
+                            </div>
+                          </div>
                         </div>
+                        </a>
                       </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-lg-3 col-md-3 col-xl-3">
-                    <div class="card ncard">
-                      <div class="nwrap">
-                        <img class="card-img-top" src="{%static 'first_app/imgs/home4.jpg' %}" alt="Card image cap">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-lg-3 col-md-3 col-xl-3">
-                    <div class="card ncard">
-                      <div class="nwrap">
-                        <img class="card-img-top" src="{%static 'first_app/imgs/home4.jpg' %}" alt="Card image cap">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-lg-3 col-md-3 col-xl-3 ">
-                    <div class="card">
-                      <div class="nwrap ncard">
-                        <img class="card-img-top" src="{%static 'first_app/imgs/home4.jpg' %}" alt="Card image cap">
-                        <div class="card-body">
-                          <p class="card-text">some quick example text</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                      <!-- one card finish-->
+                    {% endfor %}
+                  {% endif %}
                 </div>
               </div>
               <div class="tab-pane fade show active" id="nav-videos" role="tabpanel" aria-labelledby="nav-videos-tab">

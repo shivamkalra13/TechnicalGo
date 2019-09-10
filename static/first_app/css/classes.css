@@ -51,6 +51,7 @@ color: white;
 	margin-top: 1%;
 	margin-bottom: 1%;
 	background-color:#f8f8f8;
+	height: inherit;
 }
 .nav-link /*tab links */
 {
@@ -60,11 +61,11 @@ color: white;
 .nav-item:hover,.nav-link:hover /*tab text color on hover */
 {
 	color: white;
+	background-color:red;
 }
 
 .nav-item:hover /*tab hover*/
 {
-	background-color: #e53467;
 	font-weight: bold;
 }
 
