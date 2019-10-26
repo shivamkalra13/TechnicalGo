@@ -45,11 +45,31 @@
               <div class="opt1 col-12">
                 <div class="d-flex row">
                   <div class="order-3 order-lg-1 order-md-1 order-xl-1 col-lg-6 col-md-6 col-lg-6 col-12 align-items-end">
-                    <div class="nav nav-pills" id="nav-tab" role="tablist">
-                      <a class="nav-item nav-link active" id="nav-videos-tab" data-toggle="tab"  role="tab" aria-controls="nav-videos" aria-selected="true" href="#nav-videos"> Videos</a>
-                      <a class="nav-item nav-link" id="nav-notes-tab" data-toggle="tab" href="#nav-notes" role="tab" aria-controls="nav-notes" aria-selected="false">Notes</a>
-                      <a class="nav-item nav-link" id="nav-books-tab" data-toggle="tab" href="#nav-books" role="tab" aria-controls="nav-books" aria-selected="false">Books</a>
-                    </div>
+                    <!--               for nav menu tabs                 -->
+                    <!--<ul class="nav nav-pills">
+                      <li class="nav-item active">
+                        <a class="nav-link nav-link-color" href="#nav-videos">Videos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link nav-link-color"  href="#nav-notes">Notes</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link nav-link-color"  href="#nav-books">Books</a>
+                      </li>
+                    </ul>-->
+
+                    <ul class="nav nav-pills" id="nav-tab" role="tablist">
+                      <li class="nav-item nav-videos-tab">
+                        <a class="nav-link active nav-videos-tab" data-toggle="tab" role="tab" aria-controls="nav-videos" aria-selected="true" href="#nav-videos">
+                        Videos</a>
+                      </li>
+                      <li class="nav-item nav-notes-tab">
+                        <a class="nav-link nav-notes-tab" data-toggle="tab" href="#nav-notes" role="tab" aria-controls="nav-notes" aria-selected="false">Notes</a>
+                      </li>
+                      <li class="nav-item nav-books-tab">
+                        <a class="nav-link nav-books-tab" data-toggle="tab" href="#nav-books" role="tab" aria-controls="nav-books" aria-selected="false">Books</a>
+                      </li>
+                    </ul>
                   </div>
                   <div class="order-1 order-lg-2 order-md-3 order-xl-3 col-12 col-lg-3 col-md-3 col-xl-3 align-self-center">
                     <select id="classDrop">
