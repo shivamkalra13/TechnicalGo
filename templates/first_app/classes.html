@@ -108,19 +108,49 @@
           <div class="space">
           </div>
             <div class="tab-content" id="nav-tabContent">
+              <!-- Content when notes pane is selected-->
               <div class="tab-pane fade" id="nav-notes" role="tabpanel" aria-labelledby="nav-notes-tab">
                 <div class="row">
                   {% if notes_list %}
-                    {% with i=1 %}
+                    <script> var i = 0; </script>
                     {% for note in notes_list %}
                       <!-- one card -->
                       <div class="col-6 col-lg-3 col-md-3 col-xl-3"  style="margin-bottom:2%;">
                         <a href="{{note.url}}" target="_blank" style="text-decoration:none;color:black">
                         <div class="card ncard">
                           <div class="nwrap">
-                            <img class="card-img-top" src="{%static 'first_app/imgs/notesPics/1.jpeg' %}" alt="Card image cap">
+                            <script>//For changing the pictures of cards of notes
+                              switch (i) {
+                                case 0:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/0.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 1:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/1.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 2:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/2.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 3:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/3.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 4:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/4.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 5:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/5.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 6:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/6.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                default:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/7.jpeg' %} alt='Card image cap'>";
+                                  break;
+                              }
+                              document.write(imgpath);
+                              i=(i+1)%8;
+                            </script>
                             <div class="card-body">
-                              <p class="card-text">{{ i|add:1 }}<br>{{note.title}}</p>
+                              <p class="card-text">{{note.title}}</p>
                             </div>
                           </div>
                         </div>
@@ -128,46 +158,92 @@
                       </div>
                       <!-- one card finish-->
                     {% endfor %}
-                    {% endwith %}
                   {% endif %}
                 </div>
               </div>
-              <div class="tab-pane fade show active" id="nav-videos" role="tabpanel" aria-labelledby="nav-videos-tab">
-                <br>
-                <div class="vwrap">
-                  <div class="col-12 video">
-                    <div class="card vcard">
-                      <div class="row">
-                        <div class="col-5 col-md-3 col-lg-3 col-xl-3">
-                          <img class="img-fluid w-100 text-center vthumb img-responsive" src="{%static 'first_app/imgs/home4.jpg' %}" alt="Card image cap">
-                        </div>
-                        <div class="col-7 col-md-9 col-lg-9 col-xl-9 desc">
-                          <div class="card-block">
-                          Hello
+              <!-- Content when books pane is selected-->
+              <div class="tab-pane fade" id="nav-books" role="tabpanel" aria-labelledby="nav-books-tab">
+                <div class="row">
+                  {% if books_list %}
+                    <script> var i = 0; </script>
+                    {% for book in books_list %}
+                      <!-- one card -->
+                      <div class="col-6 col-lg-3 col-md-3 col-xl-3"  style="margin-bottom:2%;">
+                        <a href="{{book.url}}" target="_blank" style="text-decoration:none;color:black">
+                        <div class="card ncard">
+                          <div class="nwrap">
+                            <script>//For changing the pictures of cards of notes
+                              switch (i) {
+                                case 0:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/0.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 1:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/1.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 2:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/2.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 3:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/3.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 4:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/4.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 5:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/5.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                case 6:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/6.jpeg' %} alt='Card image cap'>";
+                                  break;
+                                default:
+                                  var imgpath = "<img class='card-img-top' src={%static 'first_app/imgs/notesPics/7.jpeg' %} alt='Card image cap'>";
+                                  break;
+                              }
+                              document.write(imgpath);
+                              i=(i+1)%8;
+                            </script>
+                            <div class="card-body">
+                              <strong> {{book.title}} <br>- {{book.author}} </strong>
+                              <p class="card-text">{{book.desc}}</p>
+                            </div>
                           </div>
                         </div>
+                        </a>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="vwrap">
-                  <div class="col-12 video">
-                    <div class="card vcard">
-                      <div class="row">
-                        <div class="col-5 col-md-3 col-lg-3 col-xl-3">
-                          <img class="img-fluid w-100 text-center vthumb img-responsive" src="{%static 'first_app/imgs/home4.jpg' %}" alt="Card image cap">
-                        </div>
-                        <div class="col-7 col-md-9 col-lg-9 col-xl-9 desc">
-                          <div class="card-block">
-                          Hello
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                      <!-- one card finish-->
+                    {% endfor %}
+                  {% endif %}
                 </div>
               </div>
-              <div class="tab-pane fade" id="nav-books" role="tabpanel" aria-labelledby="nav-books-tab">Books</div>
+              <!-- Content when videos pane is selected-->
+              <div class="tab-pane fade show active" id="nav-videos" role="tabpanel" aria-labelledby="nav-videos-tab">
+                <div class="row">
+                  {% if videos_list %}
+                    {% for video in videos_list %}
+                      <!-- one card -->
+                      <br>
+                      <a href="{{video.url}}" target="_blank" style="text-decoration:none;color:black">
+                      <div class="vwrap">
+                        <div class="col-12 video">
+                          <div class="card vcard">
+                            <div class="row">
+                              <div class="col-5 col-md-3 col-lg-3 col-xl-3">
+                                <img class="img-fluid w-100 text-center vthumb img-responsive" src="{%static 'first_app/imgs/home4.jpg' %}" alt="Card image cap">
+                              </div>
+                              <div class="col-7 col-md-9 col-lg-9 col-xl-9 desc">
+                                <div class="card-block">
+                                <strong>{{video.title}}</strong>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                      <!-- one card finish-->
+                    {% endfor %}
+                  {% endif %}
+                </div>
             </div>
       </div>
     <!-- Popper.js, then Bootstrap JS -->
