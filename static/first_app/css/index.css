@@ -264,3 +264,14 @@ a.logo:hover
 {
 	min-height: 8vh;
 }
+
+a.aForBut
+{
+	text-decoration: none;
+	color: black;
+}
+a.footerLink, a.footerLink:hover
+{
+	text-decoration: none;
+	color: white;
+}

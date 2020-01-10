@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{%static 'first_app/css/try.css'%}" type="text/css">
+    <link rel="stylesheet" href="{%static 'first_app/css/index.css'%}" type="text/css">
     <!--Font styles form google-->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <!--JQuery-->
@@ -134,6 +134,7 @@
         <br>
         <div class="row">
           <div class="wrap col-md-3">
+           <a class="aForBut" href="../books">
             <div class="card">
               <img class="card-img-top" src="{%static 'first_app/imgs/book1.jpeg'%}" alt="Card image cap">
               <div class="card-body">
@@ -141,8 +142,10 @@
                 <p class="card-text">Books are human beings' best friend.</p>
               </div>
             </div>
+           </a>
           </div>
           <div class="wrap col-md-3">
+           <a class="aForBut" href="../classes">
             <div class="card">
               <img class="card-img-top" src="{%static 'first_app/imgs/vid1.jpeg'%}" alt="Card image cap">
               <div class="card-body">
@@ -150,9 +153,10 @@
                 <p class="card-text">Enhance your learnings through videos.</p>
               </div>
             </div>
+           </a>
           </div>
           <div class="wrap col-md-3">
-            <a href="../notes">
+           <a class="aForBut" href="../notes">
             <div class="card">
                 <img class="card-img-top" src="{%static 'first_app/imgs/home4.jpg'%}" alt="Card image cap">
                 <div class="card-body">
@@ -160,7 +164,7 @@
                   <p class="card-text">Make your exam preparation easier.</p>
                 </div>
             </div>
-            </a>
+           </a>
           </div>
         </div>
         <p>
@@ -172,22 +176,22 @@
         <div class="footer container-fluid" align="center">
           <div class="row footer-row">
             <div class="col-md-2">
-              Home
+              <a class="footerLink" href="../index">Home</a>
             </div>
             <div class="col-md-2">
-              Videos
+              <a class="footerLink" href="../classes">Videos</a>
             </div>
             <div class="col-md-2">
-              Notes
+              <a class="footerLink" href="../notes">Notes</a>
             </div>
             <div class="col-md-2">
-              Books
+              <a class="footerLink" href="../books">Books</a>
             </div>
             <div class="col-md-2">
-              About Us
+              <a class="footerLink" href="#">About Us</a>
             </div>
             <div class="col-md-2">
-              Contact Us
+              <a class="footerLink" href="#">Contact Us</a>
             </div>
           </div>
         </div>
