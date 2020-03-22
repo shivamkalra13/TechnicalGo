@@ -117,9 +117,11 @@ select /*dropdown*/
 	height: 85%;
 	margin-top:5%;
 }
-.vwrap /*video wrapper div */
+.vwrap /*video wrapper div*/
 {
 	margin-bottom: 10px;
+	max-height: 150px;
+	overflow: hidden;
 }
 .vcard:hover
 {
