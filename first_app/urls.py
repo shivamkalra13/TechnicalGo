@@ -20,6 +20,7 @@ from . import views     # Just importing views.py
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index, name='index'),   # URL of the index of website.
+    path('',views.index,name='index'),
     path('classes/', views.classes, name='classes'),
     path('navbar/', views.navbar, name='navbar'),
     path('notes/',views.notes, name='notes'),
