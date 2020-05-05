@@ -149,4 +149,10 @@ def books(request):
     return render(request, 'first_app/books.html', context=mycontext)
 
 def player(request):
-    return render(request, 'first_app/videoplayer.html')
+    videos_lst1 = Videos.objects.all()[:3]
+    videos_lst2 = Videos.objects.all()[3:6]
+    mycontext={'videos_list1':videos_lst1,'videos_list2':videos_lst2}
+    return render(request, 'first_app/videoplayer.html', context=mycontext)
+
+def footer(request):
+    return render(request, 'first_app/footer.html')

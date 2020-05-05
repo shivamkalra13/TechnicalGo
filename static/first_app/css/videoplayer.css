@@ -73,7 +73,8 @@ iframe
 }
 .card-img-top
 {
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   border: 1px grey solid;
 }
 @media (max-width:575px)

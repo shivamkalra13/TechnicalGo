@@ -23,6 +23,7 @@ urlpatterns = [
     path('',views.index,name='index'),
     path('classes/', views.classes, name='classes'),
     path('navbar/', views.navbar, name='navbar'),
+    path('footer/', views.footer, name='footer'),
     path('notes/',views.notes, name='notes'),
     path('books/',views.books, name='books'),
     path('player/',views.player, name='player')

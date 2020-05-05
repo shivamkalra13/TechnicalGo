@@ -23,6 +23,7 @@
           return results[1] || 0;
         }*/
         $("#navbar").load("../navbar");
+        $("#footer").load("../footer");
         //$("#classDrop").val(decodeURIComponent($.urlParam('cld')));
         $("#classDrop").change(function(){
           window.open('../classes/?cld='+$("#classDrop").val(),'_self');
@@ -222,23 +223,18 @@
                   {% if videos_list %}
                     {% for video in videos_list %}
                       <!-- one card -->
-                      <br>
                       <a class="timg" href="../player?url={{video.url}}" target="_blank" style="text-decoration:none;color:black;width:100%;" onload=getthumbnail()>
-                        <div class="vwrap">
-                          <div class="col-12 video">
-                            <div class="card vcard">
-                              <div class="row">
-                                <div class="col-5 col-md-3 col-lg-3 col-xl-3">
-                                  <script>
-                                    var url = '{{video.url}}'.split('www.youtube.com/watch?v=')[1];
-                                    document.write('<img id="vidimg" class="img-fluid w-100 text-center vthumb img-responsive" src="http://i1.ytimg.com/vi/'+url+'/maxresdefault.jpg" alt="Card image cap">')
-                                  </script>
-                              </div>
-                                <div class="col-7 col-md-9 col-lg-9 col-xl-9 desc">
-                                  <div class="card-block">
-                                  <strong>{{video.title}}</strong>
-                                  </div>
-                                </div>
+                        <div class="card vcard">
+                          <div class="row">
+                            <div class="col-5 col-md-3 col-lg-3 col-xl-3">
+                              <script>
+                                var url = '{{video.url}}'.split('www.youtube.com/watch?v=')[1];
+                                document.write('<img id="vidimg" class="img-fluid w-100 text-center vthumb img-responsive" src="http://i1.ytimg.com/vi/'+url+'/hqdefault.jpg" alt="Card image cap">')
+                              </script>
+                          </div>
+                            <div class="col-7 col-md-9 col-lg-9 col-xl-9 desc">
+                              <div class="card-block">
+                              <strong>{{video.title}}</strong>
                               </div>
                             </div>
                           </div>
@@ -249,7 +245,9 @@
                   {% endif %}
                 </div>
             </div>
+          </div>
       </div>
+      <div id="footer"></div>
     <!-- Popper.js, then Bootstrap JS -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

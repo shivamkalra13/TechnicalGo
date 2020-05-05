@@ -204,7 +204,6 @@ a.logo:hover
 	/*Footer Begins */
 	.footer
 	{
-		max-height: 22vh;
 		min-height: 22vh;
 		background-color: #001e3c;
 		color: white;
@@ -235,7 +234,6 @@ a.logo:hover
 	}
 	.footer /* footer */
 	{
-		max-height:15vh;
 		min-height:15vh;
 		background-color: #001e3c;
 		color: white;
@@ -245,7 +243,6 @@ a.logo:hover
 
 .card{
 	z-index: -2;
-	padding: 2%;
 	border-radius: 18px;
 }
 .wrap
@@ -264,7 +261,11 @@ a.logo:hover
 {
 	min-height: 8vh;
 }
-
+.card-img-top
+{
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+}
 a.aForBut
 {
 	text-decoration: none;
