@@ -2,9 +2,18 @@ body /*backgraound colour*/
 {
 	background-color:#f8f8f8;
 }
+#navbar
+{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	z-index:10;
+}
 .container /* container width*/
 {
 	max-width: 92%;
+	margin-top: 80px;
 }
 /* div for class heading */
 .head /*heading (Class)*/

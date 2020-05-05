@@ -26,6 +26,8 @@
       document.write('<iframe src="https://www.youtube.com/embed/'+y+'" frameborder="1" allow="accelerometer;encrypted-media;gyroscope;picture-in-picture" allowfullscreen autoplay="1"></iframe>');
     </script>
   </div>
+
+  <!--Related Videos Carousel Section-->
   <div class="relatedv">
     <div class="rvhead">&nbsp; &nbsp;Related Videos</div>
   </div>
@@ -36,58 +38,48 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row">
-                <div class="col-xl-4 col-lg col-md-4 col-sm-4 suggest">
-                  <div class="card">
-                    <img src="http://i1.ytimg.com/vi/40yqDWiEr_g/hqdefault.jpg" class="card-img-top" alt="Image Not Found">
-                  <div class="card-body">
-                    <p class="card-text">Title</p>
-                  </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-md-4 col-sm-4 col-lg-4 suggest">
-                  <div class="card">
-                    <img src="http://i1.ytimg.com/vi/40yqDWiEr_g/hqdefault.jpg" class="card-img-top" alt="Image Not Found">
-                  <div class="card-body">
-                    <p class="card-text">Title</p>
-                  </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-md-4 col-sm-4 col-lg-4 suggest">
-                  <div class="card">
-                    <img src="http://i1.ytimg.com/vi/40yqDWiEr_g/hqdefault.jpg" class="card-img-top" alt="Image Not Found">
-                  <div class="card-body">
-                    <p class="card-text">Title</p>
-                  </div>
-                  </div>
-                </div>
+                {% if videos_list1 %}
+                  {% for video in videos_list1 %}
+                    <!-- one card -->
+                    <div class="col-xl-4 col-lg col-md-4 col-sm-4 suggest">
+                      <a href="../player?url={{video.url}}" target="_blank" style="text-decoration:none;color:black;width:100%;">
+                        <div class="card">
+                          <script>
+                            var url = '{{video.url}}'.split('www.youtube.com/watch?v=')[1];
+                            document.write('<img class="card-img-top" src="http://i1.ytimg.com/vi/'+url+'/hqdefault.jpg" alt="Card image cap">')
+                          </script>
+                          <div class="card-body">
+                            <p class="card-text">Title</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- one card finish-->
+                  {% endfor %}
+                {% endif %}
               </div>
             </div>
             <div class="carousel-item">
               <div class="row">
-                <div class="col-xl-4 col-md-4 col-sm-4 col-lg-4 suggest">
-                  <div class="card">
-                    <img src="http://i1.ytimg.com/vi/40yqDWiEr_g/hqdefault.jpg" class="card-img-top" alt="Image Not Found">
-                  <div class="card-body">
-                    <p class="card-text">Title</p>
-                  </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-md-4 col-sm-4 col-lg-4 suggest">
-                  <div class="card">
-                    <img src="http://i1.ytimg.com/vi/40yqDWiEr_g/hqdefault.jpg" class="card-img-top" alt="Image Not Found">
-                  <div class="card-body">
-                    <p class="card-text">Title</p>
-                  </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 suggest">
-                  <div class="card suggest">
-                    <img src="http://i1.ytimg.com/vi/40yqDWiEr_g/hqdefault.jpg" class="card-img-top" alt="Image Not Found">
-                  <div class="card-body">
-                    <p class="card-text">Title</p>
-                  </div>
-                  </div>
-                </div>
+                {% if videos_list2 %}
+                  {% for video in videos_list2 %}
+                    <!-- one card -->
+                    <div class="col-xl-4 col-lg col-md-4 col-sm-4 suggest">
+                      <a href="../player?url={{video.url}}" target="_blank" style="text-decoration:none;color:black;width:100%;">
+                        <div class="card">
+                          <script>
+                            var url = '{{video.url}}'.split('www.youtube.com/watch?v=')[1];
+                            document.write('<img class="card-img-top" src="http://i1.ytimg.com/vi/'+url+'/hqdefault.jpg" alt="Card image cap">')
+                          </script>
+                          <div class="card-body">
+                            <p class="card-text">Title</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- one card finish-->
+                  {% endfor %}
+                {% endif %}
               </div>
             </div>
           </div>

@@ -1,0 +1,25 @@
+@media (min-width: 768px)	/*for other devices*/
+{
+  .footer /* footer */
+	{
+		min-height:15vh;
+		background-color: #001e3c;
+		color: white;
+		padding: 3%;
+	}
+}
+@media (max-width: 767.98px)	/*for mobile and tablet*/
+{
+  .footer
+  {
+    min-height: 22vh;
+    background-color: #001e3c;
+    color: white;
+    padding: 3%;
+  }
+}
+a.footerLink, a.footerLink:hover
+{
+	text-decoration: none;
+	color: white;
+}

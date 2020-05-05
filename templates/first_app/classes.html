@@ -23,6 +23,7 @@
           return results[1] || 0;
         }*/
         $("#navbar").load("../navbar");
+        $("#footer").load("../footer");
         //$("#classDrop").val(decodeURIComponent($.urlParam('cld')));
         $("#classDrop").change(function(){
           window.open('../classes/?cld='+$("#classDrop").val(),'_self');
@@ -222,7 +223,6 @@
                   {% if videos_list %}
                     {% for video in videos_list %}
                       <!-- one card -->
-
                       <a class="timg" href="../player?url={{video.url}}" target="_blank" style="text-decoration:none;color:black;width:100%;" onload=getthumbnail()>
                         <div class="card vcard">
                           <div class="row">
@@ -245,7 +245,9 @@
                   {% endif %}
                 </div>
             </div>
+          </div>
       </div>
+      <div id="footer"></div>
     <!-- Popper.js, then Bootstrap JS -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
