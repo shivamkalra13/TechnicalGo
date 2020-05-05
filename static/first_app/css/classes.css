@@ -105,6 +105,7 @@ select /*dropdown*/
 {
 	background-color:#f8f8f8;
 	border:none;
+	margin-bottom: 10px;
 }
 .desc /* video description */
 {
@@ -113,28 +114,17 @@ select /*dropdown*/
 }
 .vthumb /* video image */
 {
-	border-radius: 7px;
-	height: 85%;
-	margin-top:5%;
-}
-.vwrap /*video wrapper div*/
-{
-	margin-bottom: 10px;
-	max-height: 150px;
-	overflow: hidden;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+	margin: inherit;
 }
 .vcard:hover
 {
 	background-color: white;
 	border: none;
-}
-.vwrap:hover/*hover animation */
-{
-	background-color: white;
-	border-radius: 6px;
-	border: none;
 	box-shadow:0px 0px 11px 11px rgb(160,161,161,0.2);
 }
+
 /* video section Ends */
 .nwrap:hover
 {
